@@ -3,7 +3,6 @@ name: Deploy to Render
 on:
   pull_request:
     branches:
-      - main
       - feature/AmazingFeature
   push:
     branches:
