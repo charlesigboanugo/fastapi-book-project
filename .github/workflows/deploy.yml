@@ -5,7 +5,9 @@ on:
     branches:
       - main
       - feature/AmazingFeature
-  
+  push:
+    branches:
+      - feature/AmazingFeature
 
 jobs:
   deploy:
