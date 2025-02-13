@@ -1,9 +1,12 @@
 name: Deploy to Render
 
 on:
-  merge_group:
+  pull_request:
     branches:
       - main
+      - feature/AmazingFeature
+  push:
+    branches:
       - feature/AmazingFeature
 
 jobs:
