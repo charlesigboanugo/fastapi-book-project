@@ -1,0 +1,7 @@
+services:
+  - name: myfastapi-service
+    type: web
+    runtime: docker
+    plan: free
+    repo: https://github.com/charlesigboanugo/fastapi-book-project
+    dockerfilePath: ./Dockerfile
