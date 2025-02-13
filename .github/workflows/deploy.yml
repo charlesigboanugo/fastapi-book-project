@@ -5,10 +5,7 @@ on:
     branches:
       - main
       - feature/AmazingFeature
-  push:
-    branches:
-      - feature/AmazingFeature
-
+  
 jobs:
   deploy:
     runs-on: ubuntu-latest
