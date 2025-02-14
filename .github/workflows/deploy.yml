@@ -9,8 +9,6 @@ on:
   pull_request:
     branches:
       - main  # Runs when a pull request is made to main
-    paths:
-      - "feature/AmazingFeature/**"  # Ensures only PRs from this feature trigger tests
 
 jobs:
   test:
