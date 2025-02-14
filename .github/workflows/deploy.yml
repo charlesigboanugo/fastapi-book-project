@@ -31,7 +31,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run Tests
-        run: pytest --maxfail=1
+        run: pytest --maxfail=1 --disable-warnings --exitfirst || exit 1
 
   deploy:
     name: Deploy to EC2
