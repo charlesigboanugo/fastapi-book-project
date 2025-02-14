@@ -52,10 +52,10 @@ jobs:
             cd /var/www/fastapi-book-project
             git checkout ${{ env.branch }}  # Checkout the correct branch
             git pull origin ${{ env.branch }}  # Get the latest changes
+            
             source .venv/bin/activate  # Activate virtual environment
             pip install -r requirements.txt  # Install dependencies
-            sudo systemctl restart nginx
-            pkill uvicorn
-            nohup uvicorn app:app --host 127.0.0.1 --port 8000 > server.log 2>&1 &
-
-
+            
+            sudo systemctl daemon-reload  # Reload systemd if needed
+            sudo systemctl restart fastapi-app  # Restart the FastAPI service
+            sudo systemctl enable fastapi-app  # Ensure it starts on boot
